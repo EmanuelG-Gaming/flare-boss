@@ -70,6 +70,6 @@ flareCannon.bullet = flareCannonBullet;
 UnitTypes.flare.weapons.get(0).reload = 3;
 UnitTypes.flare.weapons.get(1).reload = 3;
 
-flare.weapons.add(
+UnitTypes.flare.weapons.add(
   flareCannon
 );
