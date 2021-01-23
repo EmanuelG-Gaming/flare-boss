@@ -67,5 +67,5 @@ const flareCannonBullet = extend(MissileBulletType, {
 flareCannon.bullet = flareCannonBullet;
 
 flare.weapons.add(
-  flareCannon,
+  flareCannon
 );
