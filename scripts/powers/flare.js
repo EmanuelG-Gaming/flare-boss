@@ -66,6 +66,10 @@ const flareCannonBullet = extend(MissileBulletType, {
 
 flareCannon.bullet = flareCannonBullet;
 
+// Flare reload because why not
+UnitTypes.flare.weapons.get(0).reload = 3;
+UnitTypes.flare.weapons.get(1).reload = 3;
+
 flare.weapons.add(
   flareCannon
 );
