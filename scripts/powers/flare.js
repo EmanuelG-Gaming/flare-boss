@@ -11,7 +11,6 @@ Events.on(ClientLoadEvent, b => {
         ()=>{
             UnitTypes.flare.health = 99999;
             UnitTypes.flare.armor = 99999;
-            UnitTypes.flare.weapons.get(0).bullet.StatusEffect = sapped;
             });
             Vars.content.units().each(e => {
             if(e.flying === true) e.health = 99999;
