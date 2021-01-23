@@ -34,7 +34,7 @@ UnitTypes.flare.weapons.get(0).bullet.hitEffect = flareAoeEffect;
 const flareShootEffect = new Effect(15, e => {
   Draw.color(Color.red, Color.white, e.fin()); //color goes from red to white
   Lines.stroke(e.fout() * 2); //line thickness goes from 2 to 0
-  Lines.circle(e.x, e.y, e.fin() * 3); //draw a circle whose radius goes from 0 to 3
+  Lines.circle(e.x, e.y, e.fin() * 8); //draw a circle whose radius goes from 0 to 8
 });
 
 UnitTypes.flare.weapons.get(0).bullet.shootEffect = flareShootEffect;
