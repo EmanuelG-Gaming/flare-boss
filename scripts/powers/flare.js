@@ -40,27 +40,27 @@ const flareShootEffect = new Effect(15, e => {
 UnitTypes.flare.weapons.get(0).bullet.shootEffect = flareShootEffect;
 
 const flareCannon = extend(Weapon, {
-  reload: 1000;
-  x: 0;
-  y: 0,¡;
-  shots: 3;
-  shotDelay: 5;
-  spacing: 5;
-  mirror: false;
-  alternate: false;
-  rotate: true;
+  reload: 1000,
+  x: 0,
+  y: 0,
+  shots: 3,
+  shotDelay: 5,
+  spacing: 5,
+  mirror: false,
+  alternate: false,
+  rotate: true, 
   shootSound: Sounds.plasmadrop
 });
 
 const flareCannonBullet = extend(MissileBulletType, {
-  damage: 109420;
-  speed: 9;
-  homingPower: 0.09;
-  lifetime: 1000;
-  trailEffect: flareShootEffect;
-  weaveMag: 0.6;
-  hitSound: Sounds.explosion;
-  homingRange: 1000;
+  damage: 109420,
+  speed: 9,
+  homingPower: 0.09,
+  lifetime: 1000,
+  trailEffect: flareShootEffect,
+  weaveMag: 0.6,
+  hitSound: Sounds.explosion,
+  homingRange: 1000,
   hitEffect: flareAoeEffect
 });
 
