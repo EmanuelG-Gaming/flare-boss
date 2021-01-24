@@ -32,6 +32,9 @@ const flareAoeEffect = new Effect(20, e => {
 const flareMissileEffect = new Effect(50, e => {
   Draw.color(Color.red, Color.white, e.fin()); //color goes from red to white
   Fill.circle(e.x, e.y, e.fin() * 35); //draw a circle whose radius goes from 0 to 35
+  Draw.color(Color.white, Color.white, e.fin()); //color goes from white to white
+  Lines.stroke(e.fout() * 20); //line thickness goes from 20 to 0
+  Lines.circle(e.x, e.y, e.fin() * 50); //draw a circle whose radius goes from 0 to 50
 });
 
 UnitTypes.flare.weapons.get(0).bullet.hitEffect = flareAoeEffect;
