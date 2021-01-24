@@ -64,7 +64,7 @@ const flareCannonBullet = extend(MissileBulletType, {
   hitEffect: flareAoeEffect
 });
 
-flare.weapons.add(
+UnitTypes.flare.weapons.add(
   flareCannon
 );
 
