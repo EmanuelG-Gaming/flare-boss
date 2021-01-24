@@ -28,6 +28,12 @@ const flareAoeEffect = new Effect(20, e => {
   Lines.circle(e.x, e.y, e.fin() * 10); //draw a circle whose radius goes from 0 to 10
 });
 
+//flare missile aoe
+const flareMissileEffect = new Effect(50, e => {
+  Draw.color(Color.red, Color.white, e.fin()); //color goes from red to white
+  Fill.circle(e.x, e.y, e.fin() * 35); //draw a circle whose radius goes from 0 to 35
+});
+
 UnitTypes.flare.weapons.get(0).bullet.hitEffect = flareAoeEffect;
 
 //flare shoot aoe
@@ -61,7 +67,7 @@ const flareCannonBullet = extend(MissileBulletType, {
   weaveMag: 0.6,
   hitSound: Sounds.explosion,
   homingRange: 1000,
-  hitEffect: flareAoeEffect
+  hitEffect: flareMissileEffect
 });
 
 UnitTypes.flare.weapons.add(
