@@ -1,6 +1,6 @@
 name: "Flare Boss" 
 displayName: "Flare Boss" 
 author: "Emanuel G"
-description: "Maoes the Flare the nemesis." 
-version: "0.1" 
+description: "Makes the Flare the nemesis. Also known as The [yellow]Wasp Bossfight." 
+version: "0.3" 
 minGameVersion: 120
