@@ -64,12 +64,8 @@ const flareCannonBullet = extend(MissileBulletType, {
   hitEffect: flareAoeEffect
 });
 
-flareCannon.bullet = flareCannonBullet;
-
-// Flare reload because why not
-UnitTypes.flare.weapons.get(0).reload = 3;
-UnitTypes.flare.weapons.get(1).reload = 3;
-
-UnitTypes.flare.weapons.add(
+flare.weapons.add(
   flareCannon
 );
+
+flareCannon.bullet = flareCannonBullet;
