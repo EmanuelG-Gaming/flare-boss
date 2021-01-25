@@ -112,7 +112,7 @@ const flareMarkerBullet = extend(MissileBulletType, {
   speed: 9,
   homingPower: 0.09,
   lifetime: 1000,
-  trailEffect: none,
+  trailEffect: flareAoeEffect,
   weaveMag: 0.6,
   hitSound: Sounds.explosion,
   homingRange: 1000,
