@@ -46,6 +46,27 @@ const flareShootEffect = new Effect(15, e => {
   Lines.circle(e.x, e.y, e.fin() * 8); //draw a circle whose radius goes from 0 to 8
 });
 
+const flareMarkedEffect = new Effect(120, e => {
+    Draw.color(Color.white);
+    Lines.line(
+        e.x + e.fout() * -20,
+        e.y + e.fout() * -20,
+        e.x + e.fout() * 20,
+        e.y + e.fout() * 20
+    );
+    Lines.line(
+        e.x + e.fout() * -20,
+        e.y + e.fout() * 20,
+        e.x + e.fout() * 20,
+        e.y + e.fout() * -20
+    );
+    Fill.circle(e.x, e.y, e.fout() * 20);
+    Timer.schedule(() => {
+        var t = extend(Teamc, {});
+        Bullets.fireball.create(t, e.x, e.y, Mathf.random());
+    }, 2);
+});
+
 UnitTypes.flare.weapons.get(0).bullet.shootEffect = flareShootEffect;
 
 const flareCannon = extend(Weapon, {
@@ -53,6 +74,19 @@ const flareCannon = extend(Weapon, {
   x: 0,
   y: 0,
   shots: 3,
+  shotDelay: 5,
+  spacing: 5,
+  mirror: false,
+  alternate: false,
+  rotate: true, 
+  shootSound: Sounds.plasmadrop
+});
+
+const flareMarker = extend(Weapon, {
+  reload: 2000,
+  x: 0,
+  y: -2,
+  shots: 1,
   shotDelay: 5,
   spacing: 5,
   mirror: false,
@@ -73,8 +107,22 @@ const flareCannonBullet = extend(MissileBulletType, {
   hitEffect: flareMissileEffect
 });
 
+const flareMarkerBullet = extend(MissileBulletType, {
+  damage: 0,
+  speed: 9,
+  homingPower: 0.09,
+  lifetime: 1000,
+  trailEffect: none,
+  weaveMag: 0.6,
+  hitSound: Sounds.explosion,
+  homingRange: 1000,
+  hitEffect: flareMarkedEffect
+});
+
 UnitTypes.flare.weapons.add(
   flareCannon
+  flareMarker
 );
 
 flareCannon.bullet = flareCannonBullet;
+flareMarker.bullet = flareMarkerBullet;
