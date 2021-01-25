@@ -120,7 +120,7 @@ const flareMarkerBullet = extend(MissileBulletType, {
 });
 
 UnitTypes.flare.weapons.add(
-  flareCannon
+  flareCannon,
   flareMarker
 );
 
