@@ -21,6 +21,11 @@ Events.on(ClientLoadEvent, b => {
     );
 });
 
+draw(unit){
+    this.super$draw(unit);		
+    Draw.rect("Flare-Boss-mountedFlares", unit.x, unit.y);
+});
+
 //flare bullet aoe
 const flareAoeEffect = new Effect(20, e => {
   Draw.color(Color.white, Color.red, e.fin()); //color goes from white to red
