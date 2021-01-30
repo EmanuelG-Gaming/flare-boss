@@ -21,10 +21,25 @@ Events.on(ClientLoadEvent, b => {
     );
 });
 
-draw(unit){
-        this.super$draw(unit);		
-        Draw.rect("Flare-Boss-mountedFlares", unit.x, unit.y);
+// Flare mount
+const flareMount = extend(Weapon, {
+  reload: 250,
+  x: 32,
+  y: 0,
+  shots: 1,
+  shotDelay: 5,
+  spacing: 5,
+  mirror: true,
+  alternate: false,
+  rotate: true, 
+  shootSound: Sounds.plasmadrop
 });
+
+        draw(unit){
+                this.super$draw(unit);		
+                Draw.rect("Flare-Boss-mountedFlares", unit.x, unit.y);
+        }
+}); 
 
 //flare bullet aoe
 const flareAoeEffect = new Effect(20, e => {
@@ -124,10 +139,24 @@ const flareMarkerBullet = extend(MissileBulletType, {
   hitEffect: flareMarkedEffect
 });
 
+const flareMountBullet = extend(LaserBulletType, {
+  length: 500,
+  width: 50,
+  lightningSpacing: 10,
+  lightningDelay: 0.5,
+  lifetime: 40,
+  damage: 100000,
+  lightningColor: Pal.heal,
+  colors: [ Pal.heal, Color.red ],
+  shootEffect: flareShootEffect
+});
+
 UnitTypes.flare.weapons.add(
   flareCannon,
-  flareMarker
+  flareMarker,
+  flareMount
 );
 
 flareCannon.bullet = flareCannonBullet;
 flareMarker.bullet = flareMarkerBullet;
+flareMount.bullet = flareMountBullet;
