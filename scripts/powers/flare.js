@@ -34,7 +34,6 @@ const flareMount = extend(Weapon, {
   rotate: true, 
   shootSound: Sounds.plasmadrop
 });
-
         draw(unit){
                 this.super$draw(unit);		
                 Draw.rect("Flare-Boss-mountedFlares", unit.x, unit.y);
