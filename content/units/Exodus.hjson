@@ -10,13 +10,14 @@ mineSpeed: 20
 weapons: [
 {
   name: Exodus-Mount
-  x: 32
+  x: 0
   y: 0
   shootSound: laserblast
   chargeSound: lasercharge
   soundPitchMin: 1
   top: false
   mirror: true
+  alternate = true
   shake: 18
   shootY: 5
   reload: 500
