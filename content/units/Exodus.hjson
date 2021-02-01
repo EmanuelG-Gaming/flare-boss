@@ -1,9 +1,9 @@
 type: flying
-hitSize: 100
+hitSize: 1
 health: 250000
 armor: 99999
-speed: 10
-rotateSpeed: 2
+speed: 5
+rotateSpeed: 10
 commandLimit: 8
 mineTier: 3
 mineSpeed: 20
