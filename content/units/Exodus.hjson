@@ -17,7 +17,6 @@ weapons: [
   soundPitchMin: 1
   top: false
   mirror: true
-  alternate = true
   shake: 18
   shootY: 5
   reload: 500
