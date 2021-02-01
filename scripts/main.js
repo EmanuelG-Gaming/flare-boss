@@ -1,6 +1,6 @@
 var powers = [
-    "flare"
     "exodus"
+    "flare"
 ];
 
 for(var power of powers) require("powers/" + power);
