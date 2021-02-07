@@ -15,3 +15,31 @@ bannium-forge.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild
                       Draw.rect(bannium-forge.regions[2], this.x, this.y);
         }
 });
+
+// General stats
+craftTime: 300,
+  ambientSound: Sounds.none,
+  hasPower: true,
+  baseExplosiveness: 5,
+  itemCapacity: 15,
+  outputItem: new ItemStack(Vars.content.getByName(ContentType.item, "flare-boss-bannium"), 1),
+  size: 2
+});
+
+/**
+  * requirements:[
+  *   silicon/800
+  *   plastanium/420
+  *   copper/6942
+  *   thorium/900
+  *   surge-alloy/990
+  * ] 
+*/
+// bannium-forge.requirements(Category.crafting, ItemStack.with(Items.silicon, 800, Items.plastanium, 420, Items.copper, 6942, Items.thorium, 900, Items.surgeAlloy, 990));
+bannium-forge.requirements = ItemStack.with(Items.silicon, 800, Items.plastanium, 420, Items.copper, 6942, Items.thorium, 900, Items.surgeAlloy, 990);
+bannium-forge.category = Category.crafting;
+bannium-forge.buildVisibility = BuildVisibility.shown;
+
+// ah yes, 25 of alot of materials
+bannium-forge.consumes.power(20);
+bannium-forge.consumes.items(ItemStack.with(Items.surgeAlloy, 25, Items.silicon, 25, Items.plastanium, 25, Items.graphite, 25, Items.copper, 25, Items.lead, 25, Items.sporePod, 25));
