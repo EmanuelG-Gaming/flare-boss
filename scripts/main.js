@@ -5,4 +5,10 @@ var powers = [
 for(var power of powers) require("powers/" + power);
 
 //units
-require("powers/exodus")
+require("powers/exodus");
+
+//production
+require("production/bannium-forge");
+
+//items
+require("items/bannium")
