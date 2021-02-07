@@ -12,6 +12,6 @@ bannium-forge.buildType = () => extendContent(GenericCrafter.GenericCrafterBuild
             Draw.rect(bannium-forge.regions[0], this.x, this.y);
 	          var liquid = bannium-forge.consumes.get(ConsumeType.liquid).liquid;
 	          Drawf.liquid(bannium-forge.regions[1], this.x, this.y, this.liquids.get(liquid) / bannium-forge.liquidCapacity, Liquids.cryofluid.color);
-                Draw.rect(bannium-forge.regions[2], this.x, this.y);
+                      Draw.rect(bannium-forge.regions[2], this.x, this.y);
         }
 });
