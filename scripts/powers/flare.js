@@ -23,16 +23,17 @@ Events.on(ClientLoadEvent, b => {
 
 // flare image for armor xd
 setStats(){
-    this.super$setStats();
+  this.super$setStats();
     
-    this.stats.remove(Stat.armor);
-    const flare = new StatValue({
-      display(table){
-        let size = 8 * 2.5;
-        table.image(Core.atlas.find("flare")).size(size * 2, size);
-      }
-    });
-    this.stats.add(Stat.armor, flare);
+  this.stats.remove(Stat.armor);
+  const flare = new StatValue({
+    display(table){
+      let size = 8 * 2.5;
+      table.image(Core.atlas.find("flare")).size(size * 2, size);
+    }
+  });
+  this.stats.add(Stat.armor, flare);
+}
     
 // Flare mount
 const flareMount = extend(Weapon, {
