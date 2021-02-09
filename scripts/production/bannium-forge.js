@@ -1,4 +1,3 @@
-//bannium-forge
 const bannium-forge = extendContent(GenericCrafter, "bannium-forge", {
         load() {
                 this.super$load();		
