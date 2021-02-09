@@ -22,6 +22,9 @@ Events.on(ClientLoadEvent, b => {
 });
 
 // flare image for armor xd
+load(){
+  this.teamRegion = Core.atlas.find("flare");
+},
 setStats(){
   this.super$setStats();
     
