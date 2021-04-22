@@ -1,2 +1,2 @@
 # flare-boss
-Flare is power
+Flare is power. Download the latest release cuz why not...
