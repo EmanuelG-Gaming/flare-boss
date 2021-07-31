@@ -3,4 +3,4 @@ displayName: "Flare Boss"
 author: "Emanuel G"
 description: "Makes the Flare the nemesis. Also known as The [yellow]Wasp Bossfight." 
 version: "0.3" 
-minGameVersion: 120
+minGameVersion: 128
